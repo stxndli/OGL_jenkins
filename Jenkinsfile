@@ -10,7 +10,7 @@ pipeline {
           cucumber buildStatus: 'UNSTABLE',
                 reportTitle: 'Test Report',
                 fileIncludePattern: '**/*.json',
-                trendsLimit: 10,
+                trendsLimit: 10
         }
         stage('SonarQube analysis') {
             steps{
