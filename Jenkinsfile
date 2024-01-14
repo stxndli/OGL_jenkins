@@ -2,7 +2,7 @@ pipeline {
     agent any
 
     environment {
-        JAVA_HOME = tool 'jdk17'
+        JAVA_HOME = sh '$(/usr/libexec/java_home -v 11.0.20)'
     }
 
     stages{
