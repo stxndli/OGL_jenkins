@@ -7,9 +7,9 @@ pipeline {
             }
         }
         stage('SonarQube analysis') {
-            steps{withSonarQubeEnv("sonar") {
+            steps{
+              withSonarQubeEnv("sonar") {
               sh './gradlew sonar'
-
             }}
         }
         stage("Quality Gate"){
