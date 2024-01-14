@@ -19,7 +19,9 @@ pipeline {
               ]
           ]
 
-          junit 'build/test-results/test/TEST-Matrix.xml'}
+          junit 'build/test-results/test/TEST-Matrix.xml'
+          
+          }
         }
         stage('SonarQube analysis') {
             steps{
@@ -41,7 +43,6 @@ pipeline {
           steps{
             sh './gradlew build'
             archiveArtifacts 'build/libs/*.jar'
-            archiveArtifacts 'build/docs/javadoc'
           }
         }
         stage("Deploy"){
