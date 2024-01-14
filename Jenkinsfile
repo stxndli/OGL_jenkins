@@ -4,6 +4,7 @@ pipeline {
         stage('Test') {
             steps{
             sh './gradlew test'
+            sh './gradlew javadoc'
             }
         }
         stage('generate reports') {
@@ -39,7 +40,6 @@ pipeline {
         stage("Build"){
           steps{
             sh './gradlew build'
-            sh './gradlew javadoc'
             archiveArtifacts 'build/libs/*.jar'
             archiveArtifacts 'build/docs'
           }
