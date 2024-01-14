@@ -9,7 +9,7 @@ pipeline {
         stage('SonarQube analysis') {
             steps{withSonarQubeEnv("sonar") {
               sh './gradlew sonar'
-              
+
             }}
         }
         stage("Quality Gate") {
@@ -28,5 +28,6 @@ pipeline {
         stage("Notify"){
              steps{sh './gradlew postPublishedPluginToSlack'}
         }
+        
     }
 }
