@@ -35,7 +35,6 @@ pipeline {
             }
           }}
         }
-        
         stage("Build"){
           steps{sh './gradlew generateMatrixAPI'}
         }
