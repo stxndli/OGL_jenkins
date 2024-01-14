@@ -11,20 +11,17 @@
         "steps": [
           {
             "result": {
-              "duration": 6358000,
-              "status": "passed"
+              "status": "undefined"
             },
             "line": 3,
             "name": "I have A Matrix",
-            "match": {
-              "location": "MatrixSteps.iHaveAMatrix()"
-            },
+            "match": {},
             "keyword": "Given "
           }
         ]
       },
       {
-        "start_timestamp": "2024-01-14T07:25:36.207Z",
+        "start_timestamp": "2024-01-14T09:03:35.564Z",
         "line": 5,
         "name": "Determinant",
         "description": "",
@@ -34,14 +31,12 @@
         "steps": [
           {
             "result": {
-              "duration": 4618000,
-              "status": "passed"
+              "duration": 449000,
+              "status": "skipped"
             },
             "line": 6,
             "name": "I compute determinant of",
-            "match": {
-              "location": "MatrixSteps.iComputeDeterminantOf(io.cucumber.datatable.DataTable)"
-            },
+            "match": {},
             "rows": [
               {
                 "cells": [
@@ -76,20 +71,12 @@
           },
           {
             "result": {
-              "duration": 3351000,
-              "status": "passed"
+              "duration": 29000,
+              "status": "skipped"
             },
             "line": 11,
             "name": "The result of determinant is -9",
-            "match": {
-              "arguments": [
-                {
-                  "val": "-9",
-                  "offset": 29
-                }
-              ],
-              "location": "MatrixSteps.iFindAsDeterminantResult(double)"
-            },
+            "match": {},
             "keyword": "Then "
           }
         ]
@@ -103,20 +90,17 @@
         "steps": [
           {
             "result": {
-              "duration": 163000,
-              "status": "passed"
+              "status": "undefined"
             },
             "line": 3,
             "name": "I have A Matrix",
-            "match": {
-              "location": "MatrixSteps.iHaveAMatrix()"
-            },
+            "match": {},
             "keyword": "Given "
           }
         ]
       },
       {
-        "start_timestamp": "2024-01-14T07:25:36.411Z",
+        "start_timestamp": "2024-01-14T09:03:35.659Z",
         "line": 14,
         "name": "Transpose",
         "description": "",
@@ -126,14 +110,12 @@
         "steps": [
           {
             "result": {
-              "duration": 1240000,
-              "status": "passed"
+              "duration": 66000,
+              "status": "skipped"
             },
             "line": 15,
             "name": "I compute transpose of",
-            "match": {
-              "location": "MatrixSteps.iComputeTransposeOf(io.cucumber.datatable.DataTable)"
-            },
+            "match": {},
             "rows": [
               {
                 "cells": [
@@ -164,14 +146,12 @@
           },
           {
             "result": {
-              "duration": 318000,
-              "status": "passed"
+              "duration": 147000,
+              "status": "skipped"
             },
             "line": 20,
             "name": "The result of transpose is",
-            "match": {
-              "location": "MatrixSteps.iFindAsTransposeResult(io.cucumber.datatable.DataTable)"
-            },
+            "match": {},
             "rows": [
               {
                 "cells": [
@@ -208,20 +188,17 @@
         "steps": [
           {
             "result": {
-              "duration": 110000,
-              "status": "passed"
+              "status": "undefined"
             },
             "line": 3,
             "name": "I have A Matrix",
-            "match": {
-              "location": "MatrixSteps.iHaveAMatrix()"
-            },
+            "match": {},
             "keyword": "Given "
           }
         ]
       },
       {
-        "start_timestamp": "2024-01-14T07:25:36.420Z",
+        "start_timestamp": "2024-01-14T09:03:35.662Z",
         "line": 26,
         "name": "Inverse",
         "description": "",
@@ -231,14 +208,12 @@
         "steps": [
           {
             "result": {
-              "duration": 2261000,
-              "status": "passed"
+              "duration": 56000,
+              "status": "skipped"
             },
             "line": 27,
             "name": "I compute inverse of",
-            "match": {
-              "location": "MatrixSteps.iComputeInverseOf(io.cucumber.datatable.DataTable)"
-            },
+            "match": {},
             "rows": [
               {
                 "cells": [
@@ -263,14 +238,12 @@
           },
           {
             "result": {
-              "duration": 255000,
-              "status": "passed"
+              "duration": 45000,
+              "status": "skipped"
             },
             "line": 31,
             "name": "The result of inverse is",
-            "match": {
-              "location": "MatrixSteps.iFindAsInverseResult(io.cucumber.datatable.DataTable)"
-            },
+            "match": {},
             "rows": [
               {
                 "cells": [
@@ -304,20 +277,17 @@
         "steps": [
           {
             "result": {
-              "duration": 104000,
-              "status": "passed"
+              "status": "undefined"
             },
             "line": 3,
             "name": "I have A Matrix",
-            "match": {
-              "location": "MatrixSteps.iHaveAMatrix()"
-            },
+            "match": {},
             "keyword": "Given "
           }
         ]
       },
       {
-        "start_timestamp": "2024-01-14T07:25:36.430Z",
+        "start_timestamp": "2024-01-14T09:03:35.664Z",
         "line": 37,
         "name": "Cofactor",
         "description": "",
@@ -327,14 +297,12 @@
         "steps": [
           {
             "result": {
-              "duration": 593000,
-              "status": "passed"
+              "duration": 63000,
+              "status": "skipped"
             },
             "line": 38,
             "name": "I compute cofactor of",
-            "match": {
-              "location": "MatrixSteps.iComputeCofactorOf(io.cucumber.datatable.DataTable)"
-            },
+            "match": {},
             "rows": [
               {
                 "cells": [
@@ -359,14 +327,12 @@
           },
           {
             "result": {
-              "duration": 147000,
-              "status": "passed"
+              "duration": 48000,
+              "status": "skipped"
             },
             "line": 42,
             "name": "The result of cofactor is",
-            "match": {
-              "location": "MatrixSteps.iFindAsCofactoreResult(io.cucumber.datatable.DataTable)"
-            },
+            "match": {},
             "rows": [
               {
                 "cells": [
