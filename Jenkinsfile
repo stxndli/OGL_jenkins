@@ -6,6 +6,9 @@ pipeline {
     }
 
     node {
+        stage('Prepare') {
+                sh 'git clone https://github.com/stxndli/OGL_jenkins && cd OGL_jenkins'
+            }
         stage('Test') {
             sh './gradlew test'
         }
@@ -28,7 +31,7 @@ pipeline {
         stage("Deploy"){
            sh './gradlew publish'
         }
-        
+
     }
 
     post {
