@@ -6,8 +6,8 @@ pipeline {
             sh './gradlew test'
             }
         }
-        stage('Archive and generate reports') {
-          steps{archiveArtifacts 'build/test-results/'
+        stage('generate reports') {
+          steps{
           cucumber reportTitle: 'Cucumber report',
           fileIncludePattern: 'target/report.json',
           trendsLimit: 10,
@@ -37,7 +37,12 @@ pipeline {
           }}
         }
         stage("Build"){
-          steps{sh './gradlew generateMatrixAPI'}
+          steps{
+            sh './gradlew build'
+            sh './gradlew javadoc'
+            archiveArtifacts 'build/libs/*.jar'
+            archiveArtifacts 'build/docs'
+          }
         }
         stage("Deploy"){
            steps{sh './gradlew publish'}
