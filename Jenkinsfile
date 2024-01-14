@@ -28,6 +28,7 @@ pipeline {
         stage("Deploy"){
            sh './gradlew publish'
         }
+        
     }
 
     post {
