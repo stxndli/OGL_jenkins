@@ -14,7 +14,7 @@ pipeline {
           classifications: [
               [
                 'key': 'Browser',
-                  'value': 'Firefox'
+                  'value': 'Chrome'
               ]
           ]
           junit 'build/test-results/test/TEST-Matrix.xml'
