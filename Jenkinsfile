@@ -6,11 +6,18 @@ pipeline {
             sh './gradlew test'
             }
         }
-        stage('Generate HTML report') {
-          cucumber buildStatus: 'UNSTABLE',
-                reportTitle: 'Test Report',
-                fileIncludePattern: '**/*.json',
-                trendsLimit: 10
+        stage('Archive and generate reports') {
+          archiveArtifacts 'build/test-results/'
+          cucumber reportTitle: 'Cucumber report',
+          fileIncludePattern: 'target/report.json',
+          trendsLimit: 10,
+          classifications: [
+              [
+                'key': 'Browser',
+                  'value': 'Firefox'
+              ]
+          ]
+          junit 'build/test-results/test/TEST-Matrix.xml'
         }
         stage('SonarQube analysis') {
             steps{
