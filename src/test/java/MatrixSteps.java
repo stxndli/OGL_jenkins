@@ -77,7 +77,7 @@ public class MatrixSteps {
         }
         Matrix result = new Matrix() ;
         result.setData(data);
-        assertEquals(result,transposeMatrix);
+        Assert.assertEquals(result,transposeMatrix);
 
 
     }
@@ -112,7 +112,7 @@ public class MatrixSteps {
         }
         Matrix result = new Matrix() ;
         result.setData(data);
-        assertEquals(result,inverseMatrix);
+        Assert.assertEquals(result,inverseMatrix);
 
 
     }
@@ -148,7 +148,7 @@ public class MatrixSteps {
         }
         Matrix result = new Matrix() ;
         result.setData(data);
-        assertEquals(result,cofactorMatrix);
+        Assert.assertEquals(result,cofactorMatrix);
 
 
     }
