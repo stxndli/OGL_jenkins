@@ -6,6 +6,12 @@ pipeline {
             sh './gradlew test'
             }
         }
+        stage('Generate HTML report') {
+          cucumber buildStatus: 'UNSTABLE',
+                reportTitle: 'Test Report',
+                fileIncludePattern: '**/*.json',
+                trendsLimit: 10,
+        }
         stage('SonarQube analysis') {
             steps{
               withSonarQubeEnv("sonar") {
