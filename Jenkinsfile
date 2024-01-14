@@ -17,6 +17,7 @@ pipeline {
                   'value': 'Chrome'
               ]
           ]
+          
           junit 'build/test-results/test/TEST-Matrix.xml'
         }
         stage('SonarQube analysis') {
