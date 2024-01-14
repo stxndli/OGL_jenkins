@@ -41,7 +41,7 @@ pipeline {
           steps{
             sh './gradlew build'
             archiveArtifacts 'build/libs/*.jar'
-            archiveArtifacts 'build/docs'
+            archiveArtifacts 'build/docs/javadoc'
           }
         }
         stage("Deploy"){
