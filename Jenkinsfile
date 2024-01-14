@@ -2,7 +2,7 @@ pipeline {
     agent any
 
     environment {
-        JAVA_HOME = tool 'jdk11'
+        JAVA_HOME = tool 'jdk17'
     }
 
     stages{
