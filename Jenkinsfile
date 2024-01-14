@@ -7,7 +7,7 @@ pipeline {
             }
         }
         stage('Archive and generate reports') {
-          archiveArtifacts 'build/test-results/'
+          steps{archiveArtifacts 'build/test-results/'
           cucumber reportTitle: 'Cucumber report',
           fileIncludePattern: 'target/report.json',
           trendsLimit: 10,
@@ -17,8 +17,8 @@ pipeline {
                   'value': 'Chrome'
               ]
           ]
-          
-          junit 'build/test-results/test/TEST-Matrix.xml'
+
+          junit 'build/test-results/test/TEST-Matrix.xml'}
         }
         stage('SonarQube analysis') {
             steps{
