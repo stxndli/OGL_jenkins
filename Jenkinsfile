@@ -11,7 +11,13 @@ pipeline {
               sh './gradlew sonar'
             }}
         }
-        
+        stage("Quality Gate") {
+            steps {
+              timeout(time: 1, unit: 'HOURS') {
+                waitForQualityGate abortPipeline: true
+              }
+            }
+          }
         stage("Build"){
           steps{sh './gradlew generateMatrixAPI'}
         }
@@ -19,7 +25,7 @@ pipeline {
            steps{sh './gradlew publish'}
         }
         stage("Notify"){
-             steps{sh './gradlew slack'}
+             steps{sh './gradlew postPublishedPluginToSlack'}
         }
     }
 }
